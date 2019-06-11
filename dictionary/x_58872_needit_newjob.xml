@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="NewJob" max_length="40" name="x_58872_needit_newjob" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element label="Eingestellt" max_length="40" name="u_boolean_3" type="boolean"/>
+        <element label="Eingestellt" max_length="40" name="u_boolean_hired" type="boolean"/>
+        <element label="Eingestellt" max_length="40" name="u_boolean_hired_1" type="boolean"/>
+        <element label="Hire" max_length="40" name="u_boolean_hire_2" type="boolean"/>
+        <element label="New Field Name" max_length="80" name="u_field_name_1" type="field_name"/>
+        <element label="Job Title" mandatory="true" max_length="80" name="u_field_name_2" type="field_name"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="Fähigkeiten man." mandatory="true" max_length="1024" name="u_glide_list_10" type="glide_list"/>
+        <element choice="1" default="100" label="Pensum max" mandatory="true" max_length="40" name="u_integer_pensum_max" type="integer">
+            <choice>
+                <element inactive_on_update="false" label="80" sequence="0" value="80"/>
+                <element inactive_on_update="false" label="90" sequence="1" value="90"/>
+                <element inactive_on_update="false" label="100" sequence="2" value="100"/>
+            </choice>
+        </element>
+        <element choice="1" default="60" label="Pensum min" mandatory="true" max_length="40" name="u_integer_pensum_min" type="integer">
+            <choice>
+                <element inactive_on_update="false" label="60" sequence="0" value="60"/>
+                <element inactive_on_update="false" label="80" sequence="1" value="80"/>
+                <element inactive_on_update="false" label="90" sequence="2" value="90"/>
+                <element inactive_on_update="false" label="100" sequence="3" value="100"/>
+            </choice>
+        </element>
+        <element attributes="omit_sys_original=true,serializer=com.glide.script.PriceXMLSerializer" label="Salär max" mandatory="true" max_length="20" name="u_price_salr_max" type="price"/>
+        <element label="Skill 01" mandatory="true" max_length="4000" name="u_simple_name_skill_01" type="simple_name_values"/>
+        <element label="Skill 01" max_length="4000" name="u_simple_skill_01" type="simple_name_values"/>
+        <element attributes="edge_encryption_enabled=true" label="New String" max_length="40" name="u_string_18" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Bewerber" max_length="40" name="u_string_bewerber_eingestellt" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Job Title" mandatory="true" max_length="100" name="u_string_job_title" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="zürich" label="Einsatzort" mandatory="true" max_length="40" name="u_string_ort" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Zürich" sequence="0" value="zürich"/>
+                <element inactive_on_update="false" label="München" sequence="1" value="münchen"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>
